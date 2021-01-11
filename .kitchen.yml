@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: shell
+
+platforms:
+  - name: krastin/xenial-vault
+    driver:
+      box: xenial-vault
+      provider: virtualbox
+
+verifier:
+  name: inspec
+
+suites:
+  - name: default
